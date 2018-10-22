@@ -1,0 +1,47 @@
+@import (reference) "common";
+
+/*detail 样式*/
+.banner {
+  position: relative;
+  left: 0;
+  top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  @media all and (min-width: 768px) {
+    top: -67px;
+  }
+
+  img {
+    @media all and (min-width: 320px) and (max-width: 767px) {
+      height: 194px;
+    }
+  }
+}
+
+.detail {
+  color: #666;
+  .detail-header {
+    padding-bottom: 35px;
+    text-align: center;
+    color: #121212;
+    border-bottom: 1px solid #e5e5e5;
+
+    h2 {
+      padding: 20px 0;
+      text-align: center;
+
+      @media all and (min-width: 320px) and (max-width: 767px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .detail-con {
+    margin: 35px 0;
+    p {
+      margin: 20px 0;
+      line-height: 2em;
+      text-indent: 2em;
+    }
+  }
+}

@@ -1,0 +1,563 @@
+@import (reference) "common";
+
+h2 {
+  text-align: center;
+  color: #060001;
+
+  @media all and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+/*banner样式*/
+.banner {
+  padding: 0;
+
+  .carousel {
+    @media all and (min-width: 768px) {
+      top: -67px;
+      z-index: 99;
+    }
+    .carousel-indicators {
+
+      li {
+        width: 50px;
+        height: 5px;
+        border: none;
+        background-color: rgba(255,255,255,.3);
+        border-radius: 0;
+
+        &.active {
+          width: 50px;
+          height: 5px;
+          background-color:#fff;
+
+          @media all and (min-width: 320px) and (max-width: 767px) {
+            width: 29px;
+          }
+        }
+
+        @media all and (min-width: 320px) and (max-width: 767px) {
+          width: 29px;
+        }
+      }
+    }
+    .carousel-inner {
+
+      img {
+        @media all and (min-width: 320px) and (max-width: 767px) {
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+/*news样式*/
+.news {
+
+  @media all and (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+  @media all and (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+
+  h2 {
+
+    @media all and (min-width: 320px) and (max-width: 767px) {
+      & {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .carousel {
+
+    .carousel-indicators {
+      text-align: right;
+
+      li {
+        width: 10px;
+        height: 2px;
+
+        &.active {
+          background-color: #a3c31d;
+          border-color: #a3c31d;
+        }
+      }
+
+    }
+
+    .carousel-inner {
+
+      .item {
+        height: 312px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .newsTab {
+
+    .tab-content {
+
+      ul {
+        padding-left: 0;
+        list-style: none;
+
+        li {
+          height: 54px;
+          line-height: 54px;
+          border-bottom: 1px dashed #e5e5e5;
+
+          .glyphicon {
+            font-size: 12px;
+
+            @media all and (min-width: 320px) and (max-width: 991px) {
+              display: none;
+            }
+          }
+
+          a {
+            display: inline-block;
+            width: 260px;
+            color: #313131;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: top;
+
+            @media all and (min-width: 375px) and (max-width: 767px) {
+              width: 270px;
+              font-size: 12px;
+            }
+
+            @media all and (min-width: 320px) and (max-width: 374px) {
+              width: 218px;
+              font-size: 12px;
+            }
+          }
+
+          time {
+            color: #999;
+
+            @media all and (min-width: 320px) and (max-width: 767px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*tab样式*/
+#myTab {
+  margin-top: 50px;
+  border: none;
+
+  @media all and (min-width: 320px) and (max-width: 991px) {
+    & {
+      margin-top: 20px;
+    }
+  }
+
+  li {
+    height: 120px;
+    text-align: center;
+
+    @media all and (min-width: 320px) and (max-width: 991px) {
+      & {
+        height: auto;
+      }
+    }
+
+    &.active {
+
+      a {
+        color: #fff;
+        background-color: #155683;
+
+        .brand-icon {
+          background-position: 0 -65px;
+        }
+
+        .patent-icon {
+          background-position: -71px -65px;
+        }
+
+        .copyright-icon {
+          background-position: -135px -66px;
+        }
+
+        .enterprise-icon {
+          background-position: -202px -66px;
+        }
+      }
+
+      .glyphicon-triangle-bottom {
+        display: block;
+      }
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 20px;
+      color: #000;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      background-color: #eee;
+
+      @media all and (min-width: 768px) and (max-width: 991px) {
+        & {
+          height: 60px;
+          line-height: 40px;
+          margin-bottom: 10px;
+          font-size: 16px;
+          border: 1px solid #e5e5e5;
+          background: none;
+        }
+      }
+
+      @media all and (min-width: 320px) and (max-width: 767px) {
+        & {
+          height: 40px;
+          line-height: 20px;
+          margin-bottom: 10px;
+          font-size: 14px;
+          border: 1px solid #e5e5e5;
+          background: none;
+        }
+      }
+
+      .brand-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+        background: url("../images/baseIcon.png") no-repeat;
+        background-size: 320px 191px;
+        background-position: 0 2px;
+      }
+
+      .patent-icon {
+        .brand-icon();
+
+        background-size: 328px 191px;
+        background-position: -71px 2px;
+      }
+
+      .copyright-icon {
+        .brand-icon();
+
+        background-size: 325px 192px;
+        background-position: -135px 2px;
+      }
+
+      .enterprise-icon {
+        .brand-icon();
+
+        background-size: 328px 192px;
+        background-position: -202px 2px;
+      }
+    }
+
+    .glyphicon-triangle-bottom {
+      display: none;
+    }
+  }
+}
+
+#myTabContent {
+  margin-top: 48px;
+
+  @media all and (min-width: 768px) and (max-width: 991px) {
+    margin-top: 16px;
+  }
+  @media all and (min-width: 320px) and (max-width: 767px) {
+    margin-top: 10px;
+  }
+
+  .tab-pane {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+
+    .goods-list {
+
+      a {
+        display: inline-block;
+        padding: 15px;
+        color: #666;
+
+        &:hover {
+          .transition();
+
+          text-decoration: none;
+          color: #a3c31d;
+        }
+      }
+    }
+  }
+}
+
+/*team样式*/
+.team {
+  padding-bottom: 15px;
+  border: 1px solid #f2f2f2;
+  border-top: none;
+  background-color: #fcfcfc;
+
+  .team-show {
+
+    .team-title {
+
+      @media all and (min-width: 320px) and (max-width: 767px) {
+        & {
+          margin: 0;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .team-des {
+      line-height: 2em;
+      margin-top: 40px;
+      color: #666;
+      text-indent: 2em;
+    }
+
+  }
+
+  .team-allPic {
+    height: 833px;
+    margin-top: 60px;
+    background: url("../images/team-bg.jpg") no-repeat center;
+
+    @media all and (min-width: 320px) and (max-width: 991px) {
+      height: auto;
+      margin-bottom: 20px;
+      background: none;
+    }
+
+    .single {
+      padding-top: 76px;
+
+      [class^="col-md-"] {
+        padding: 0 5px;
+
+        &:nth-of-type(1) {
+          margin-top: 90px;
+        }
+        &:nth-of-type(2) {
+          margin-top: 30px;
+        }
+        &:nth-of-type(3) {
+          margin-top: 70px;
+        }
+        &:nth-of-type(4) {
+          margin-top: -10px;
+        }
+        &:nth-of-type(5) {
+          margin-top: 120px;
+        }
+        &:nth-of-type(6) {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .group {
+      margin-top: 60px;
+
+      [class^="col-md-"] {
+
+        &:nth-of-type(1) {
+          margin-top: 30px;
+        }
+
+        &:nth-of-type(2) {
+          @media all and (min-width: 320px) and (max-width: 767px) {
+            img {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          margin-top: 40px;
+
+          @media all and (min-width: 768px) and (max-width: 991px) {
+            margin-top: 0;
+          }
+        }
+
+        &:hover img{
+          transform: scale(1.1);
+        }
+
+        img {
+          .transition();
+        }
+      }
+    }
+  }
+
+  .team-more {
+    width: 250px;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ccc;
+
+    @media all and (min-width: 320px) and (max-width: 991px) {
+      width: 100%;
+      height: 34px;
+      background-color: #8a97a0;
+      border-radius: 4px;
+    }
+
+    a {
+      color: #626467;
+    }
+
+    &:hover {
+      .transition();
+
+      background-color: #888;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    a {
+      display: block;
+      border-radius: 50px;
+      text-decoration: none;
+      @media all and (min-width: 320px) and (max-width: 991px) {
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        color: #fff;
+      }
+
+    }
+  }
+
+}
+
+/*partner 样式*/
+.partner {
+  padding: 60px 0;
+
+  @media all and (min-width: 320px) and (max-width: 767px) {
+    & {
+      padding: 30px 0;
+    }
+  }
+
+  h2 {
+    @media all and (min-width: 320px) and (max-width: 767px) {
+      & {
+        margin: 0;
+        font-size: 20px;
+      }
+    }
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+/*about样式*/
+.about {
+  height: 560px;
+  margin-top: 40px;
+  background: url("../images/about-bg.jpg") no-repeat center;
+  overflow: hidden;
+
+  @media all and (min-width: 320px) and (max-width: 991px) {
+    & {
+      height: 440px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  h2 {
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 45px;
+    color: #fff;
+
+    @media all and (min-width: 320px) and (max-width: 991px) {
+      font-size: 20px;
+      margin-top: 50px;
+    }
+
+  }
+
+  p {
+    margin-bottom: 125px;
+    line-height: 2em;
+    font-size: 16px;
+    text-align: center;
+    color: #c7c7c7;
+    @media all and (min-width: 320px) and (max-width: 991px) {
+      margin-bottom: 50px;
+      font-size: 12px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+
+    span {
+      padding: 0 20px;
+      @media all and (min-width: 320px) and (max-width: 991px) {
+        padding: 0 16px;
+      }
+    }
+
+    @media all and (min-width: 320px) and (max-width: 991px) {
+      font-size: 18px;
+    }
+  }
+
+  .about-more {
+
+    a {
+      display: block;
+      width: 216px;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 auto;
+      font-size: 16px;
+      text-align: center;
+      color: #fff;
+      border: 1px solid #fff;
+
+      &:hover {
+        .transition();
+
+        text-decoration: none;
+        color: #060001;
+        background-color: #fff;
+      }
+    }
+  }
+
+}
