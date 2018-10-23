@@ -404,7 +404,7 @@ h2 {
 }
 @media all and (min-width: 320px) and (max-width: 767px) {
   .partner h2 {
-    margin: 0;
+    margin-bottom: 20px;
     font-size: 20px;
   }
 }
@@ -418,9 +418,16 @@ h2 {
   background: url("../images/about-bg.jpg") no-repeat center;
   overflow: hidden;
 }
-@media all and (min-width: 320px) and (max-width: 991px) {
+@media all and (min-width: 414px) and (max-width: 991px) {
   .about {
-    height: 440px;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 413px) {
+  .about {
+    height: 390px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -478,6 +485,14 @@ h2 {
   text-align: center;
   color: #fff;
   border: 1px solid #fff;
+}
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .about .about-more a {
+    width: 168px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  }
 }
 .about .about-more a:hover {
   -webkit-transition: all 0.2s linear 0s;

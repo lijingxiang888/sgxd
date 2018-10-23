@@ -84,32 +84,17 @@
 .about .about-num {
   margin-bottom: 50px;
 }
-.about .about-num .num-item {
-  position: relative;
+.about .about-num img {
+  margin: 0 auto;
 }
-.about .about-num .num-item strong {
-  display: block;
-  font-family: SimSun;
-  font-size: 80px;
-  color: #a3c31d;
-  text-align: center;
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .about .about-num .num-item strong {
-    font-size: 60px;
+@media all and (min-width: 768px) {
+  .about .about-num img {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
-.about .about-num .num-item span {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: inline-block;
-  width: 24px;
-  height: 25px;
-}
-.about .about-num .num-item p {
-  color: #666;
-  text-align: center;
+.about .about-num p {
+  line-height: 2em;
 }
 /*诚聘英才*/
 .job {
